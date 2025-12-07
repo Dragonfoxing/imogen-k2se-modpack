@@ -15,3 +15,14 @@ end
 
 frecipe.find("big-crusher").enabled = false
 frecipe.find("electric-crusher").enabled = false
+
+local sand_migrations = frecipe.find_by_ingredient("sand")
+
+if sand_migrations == nil then
+    error("Found no recipes to migrate sand for.")
+end
+
+for _, r in pairs(sand_migrations) do
+    frecipe.replace_ingredient(r, "kr-sand", "sand")
+end
+
