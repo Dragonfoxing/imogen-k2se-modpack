@@ -1,6 +1,7 @@
 {
     "item":
     [
-        ["kr-sand", "sand"]
+        ["kr-sand", "sand"],
+        ["kr-glass", "glass"]
     ]
 }

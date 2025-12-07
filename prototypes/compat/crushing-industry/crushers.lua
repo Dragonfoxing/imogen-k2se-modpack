@@ -16,7 +16,7 @@ end
 frecipe.find("big-crusher").enabled = false
 frecipe.find("electric-crusher").enabled = false
 
-local sand_migrations = frecipe.find_by_ingredient("sand")
+local sand_migrations = frecipe.find_by_ingredient("kr-sand")
 
 if sand_migrations == nil then
     error("Found no recipes to migrate sand for.")
@@ -26,3 +26,12 @@ for _, r in pairs(sand_migrations) do
     frecipe.replace_ingredient(r, "kr-sand", "sand")
 end
 
+local glass_migrations = frecipe.find_by_ingredient("kr-glass")
+
+if glass_migrations == nil then
+    error("Found no k2se glass recipes to modify.")
+end
+
+for _, r in pairs(glass_migrations) do
+    frecipe.replace_ingredient(r, "kr-glass", "glass")
+end
