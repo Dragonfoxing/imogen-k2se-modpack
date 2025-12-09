@@ -1,6 +1,9 @@
 local ftech = require("__fdsl__.lib.technology")
 local frecipe = require("__fdsl__.lib.recipe")
 
+local data_util = require("data-utils")
+
+--[==[
 local ecrush_unlocks = ftech.find_by_unlock("electric-crusher")
 
 for _, u in pairs(ecrush_unlocks) do
@@ -16,22 +19,10 @@ end
 frecipe.find("big-crusher").enabled = false
 frecipe.find("electric-crusher").enabled = false
 
-local sand_migrations = frecipe.find_by_ingredient("kr-sand")
+]==]
 
-if sand_migrations == nil then
-    error("Found no recipes to migrate sand for.")
-end
+ftech.remove_unlock("burner-mechanics", "burner-crusher")
+ftech.add_unlock("kr-crusher", "burner-crusher")
 
-for _, r in pairs(sand_migrations) do
-    frecipe.replace_ingredient(r, "kr-sand", "sand")
-end
-
-local glass_migrations = frecipe.find_by_ingredient("kr-glass")
-
-if glass_migrations == nil then
-    error("Found no k2se glass recipes to modify.")
-end
-
-for _, r in pairs(glass_migrations) do
-    frecipe.replace_ingredient(r, "kr-glass", "glass")
-end
+data_util.furnace_to_assembler("burner-crusher")
+data_util.furnace_to_assembler("electric-crusher")

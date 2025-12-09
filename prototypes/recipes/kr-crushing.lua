@@ -6,6 +6,6 @@ crushing_lib.make_recipe(data.raw.item["concrete"], {
     hide_from_player_crafting = true,
     results = {
         { type = "item", name = "stone-brick", amount_min = 0, amount_max = 2 },
-        { type = "item", name = "kr-sand", amount_min = 3, amount_max = 8 }
+        { type = "item", name = "sand", amount_min = 3, amount_max = 8 }
     }
 })

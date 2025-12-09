@@ -1,4 +1,11 @@
--- Fix K2 crushers so they can use the Crushing Industry recipes.
-local kr_krush = data.raw["furnace"]["kr-crusher"]
+local ftech = require("__fdsl__.lib.technology")
+local frecipe = require("__fdsl__.lib.recipe")
 
-table.insert(kr_krush.crafting_categories, "basic-crushing")
+
+local ecrush_unlocks = ftech.find_by_unlock("kr-crusher")
+
+for _, u in pairs(ecrush_unlocks) do
+    ftech.remove_unlock(u, "kr-crusher")
+end
+
+frecipe.find("kr-crusher").enabled = false
