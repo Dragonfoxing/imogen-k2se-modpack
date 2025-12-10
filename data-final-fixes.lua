@@ -1,10 +1,9 @@
-require("prototypes.compat.k2.crushing")
+require("prototypes.compat.k2.heat")
 
-require("prototypes.compat.crushing-industry.crushers")
-require("prototypes.compat.crushing-industry.recipes")
-require("prototypes.compat.crushing-industry.technology")
+require("prototypes.crushers")
+require("prototypes.recipes.crushing")
 
-require("prototypes.compat.se.pulverizer")
+require("prototypes.technology")
 
 require("prototypes.updates.quality")
 
