@@ -19,7 +19,16 @@
         "sei-tesla-turret >= 1.0.1",
         "se-sa-prod-tech >= 0.1.1",
         "Krastorio2 >= 2.0.14",
-        "crushing-industry >= 0.4.21"
+        "crushing-industry >= 0.4.21",
+        "bobinserters >= 2.0.1",
+        "space-age-music-without-space-age",
+        "jetpack",
+        "helmod",
+        "grappling-gun",
+        "bullet-trails",
+        "aai-vehicles-ironclad",
+        "textplates",
+        "even-more-text-plates-2_0"
     ],
     "description": "This mod pulls together my favorite changes to Factorio 2.0 with a few fixes and tweaks here and there."
 }
