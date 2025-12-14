@@ -1,5 +1,5 @@
 {
-    "name": "imogen-modpack",
+    "name": "imogen-k2se-modpack",
     "version": "0.1.0",
     "title": "Imogen's K2SE Modpack",
     "author": "dragonfoxing",
@@ -8,7 +8,16 @@
         "base >= 2.0",
         "? quality >= 2.0",
         "! space-age",
+        "sei-library >= 1.0.15",
         "space-exploration >= 0.7.37",
+        "sei-heating-tower >= 1.0.4",
+        "sei-cryogenic-plant >= 1.0.10",
+        "sei-electromagnetic-plant >= 1.0.8",
+        "sei-turbo-belts >= 1.0.2",
+        "sei-stack-inserters >= 1.0.5",
+        "sei-rocket-turret >= 1.0.2",
+        "sei-tesla-turret >= 1.0.1",
+        "se-sa-prod-tech >= 0.1.1",
         "Krastorio2 >= 2.0.14",
         "crushing-industry >= 0.4.21"
     ],
