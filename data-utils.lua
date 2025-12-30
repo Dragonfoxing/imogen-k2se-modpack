@@ -23,4 +23,22 @@ function data_util.furnace_to_assembler(furnace_name)
   return assembler
 end
 
+
+function data_util.assembler_to_furnace(assembler_name)
+  local assembler = data.raw["assembling-machine"][assembler_name]
+  if not assembler then
+    data_util.error("Furnace " .. assembler_name .. " does not exist.")
+    return
+  end
+
+  local furnace = table.deepcopy(assembler) --[[@as data.AssemblingMachinePrototype]]
+  furnace.type = "furnace"
+  furnace.crafting_categories = {"recycling"}
+  furnace.source_inventory_size = 1 --- @diagnostic disable-line
+  furnace.result_inventory_size = 20
+  data.raw["assembling-machine"][assembler_name] = nil
+  data:extend({ furnace })
+  return furnace
+end
+
 return data_util

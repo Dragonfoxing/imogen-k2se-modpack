@@ -30,4 +30,3 @@ data.raw["assembling-machine"]["big-crusher"].crafting_speed = 1.5
 --  effect_receiver = {base_effect={productivity=0.5}},
 data.raw["assembling-machine"]["big-crusher"].effect_receiver = {base_effect={}}
 data.raw["assembling-machine"]["big-crusher"].energy_usage = "350kW"
-
