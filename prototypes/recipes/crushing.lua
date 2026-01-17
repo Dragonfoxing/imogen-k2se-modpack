@@ -117,7 +117,6 @@ if recipes_with_concrete_mix ~= nil then
     local fluid_scalar = 10
 
     local category_fixes = {
-        {name="heating-tower"},
         {name="se-pulveriser"},
         {name="se-recycling-facility"},
         {name="recycler"}
