@@ -1,8 +1,6 @@
 local ftech = require("__fdsl__.lib.technology")
 local frecipe = require("__fdsl__.lib.recipe")
 
-local data_util = require("data-utils")
-
 -- Reinstate resource drain bonuses.
 data.raw["mining-drill"]["kr-electric-mining-drill-mk2"].resource_drain_rate_percent = 75
 data.raw["mining-drill"]["area-mining-drill"].resource_drain_rate_percent = 75

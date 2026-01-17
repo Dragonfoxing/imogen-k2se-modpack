@@ -1,9 +1,4 @@
+require("prototypes.final-fixes.compat.k2.crushing")
 
-require("prototypes.crushers")
-require("prototypes.recipes.crushing")
-
-require("prototypes.technology")
-
-require("prototypes.updates.quality")
-
-require("prototypes.updates.mining-drills")
+require("prototypes.final-fixes.recipes.ores")
+require("prototypes.final-fixes.recipes.enriched-ores")

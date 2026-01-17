@@ -3,8 +3,6 @@ local crushing_lib = require("__Krastorio2__/prototypes/libraries/crushing")
 local ftech = require("__fdsl__.lib.technology")
 local frecipe = require("__fdsl__.lib.recipe")
 
-local data_util = require("data-utils")
-
 -- this is required to stop krastorio2 from bitching about concrete mix.
 
 crushing_lib.make_recipe(data.raw.item["concrete"], {
@@ -94,19 +92,7 @@ frecipe.remove_ingredient("refined-concrete", "concrete-mix")
 frecipe.add_ingredient("refined-concrete", {type="item", name="concrete", amount=20})
 frecipe.add_ingredient("refined-concrete", {type="fluid", name="water", amount=100})
 
--- Change crushed ore recipes to match their K2 counterparts.
 
-local crushed_iron_smelt = frecipe.find("crushed-iron-smelting")
-crushed_iron_smelt.energy_required = 48
-
-frecipe.scale_result("crushed-iron-smelting", "iron-plate", {amount=15})
-frecipe.scale_ingredient("crushed-iron-smelting", "crushed-iron-ore", {amount=20})
-
-local crushed_copper_smelt = frecipe.find("crushed-copper-smelting")
-crushed_copper_smelt.energy_required = 48
-
-frecipe.scale_result("crushed-copper-smelting", "copper-plate", {amount=15})
-frecipe.scale_ingredient("crushed-copper-smelting", "crushed-copper-ore", {amount=20})
 
 -- Fix recipes that were automatically changed to use concrete mix by CI.
 

@@ -1,5 +1,4 @@
 local frecipe = require("__fdsl__.lib.recipe")
-local data_util = require("data-utils")
 
 if not mods["quality"] then
   return
